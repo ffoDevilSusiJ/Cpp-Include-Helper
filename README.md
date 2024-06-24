@@ -1,4 +1,4 @@
-# Auto Include
+# Auto Include C++
 
 Automatically add include directives for C++ classes in your project.
 

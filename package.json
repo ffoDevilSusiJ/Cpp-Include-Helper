@@ -1,6 +1,6 @@
 {
-  "name": "auto-include",
-  "displayName": "Auto Include",
+  "name": "auto-include-cpp",
+  "displayName": "Auto Include C++",
   "description": "Automatically add include directives for C++ classes",
   "version": "1.0.0",
   "publisher": "ffodevilsusij",
