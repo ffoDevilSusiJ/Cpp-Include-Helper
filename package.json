@@ -1,7 +1,7 @@
 {
-  "name": "auto-include-cpp",
-  "displayName": "Auto Include C++",
-  "description": "Automatically add include directives for C++ classes",
+  "name": "cpp-include-helper",
+  "displayName": "C++ Include Helper",
+  "description": "The **C++ Include Helper** extension for Visual Studio Code streamlines the process of adding `#include` directives to your C++ source files. As you type class names, it provides autocompletion suggestions and automatically inserts the appropriate `#include` directive at the top of your file.",
   "version": "1.0.0",
   "publisher": "ffodevilsusij",
   "engines": {

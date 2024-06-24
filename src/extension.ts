@@ -39,7 +39,13 @@ export function activate(context: vscode.ExtensionContext) {
                 if (className.toLowerCase().includes(currentWord.toLowerCase())) {
                     let item = new vscode.CompletionItem(className, vscode.CompletionItemKind.Class);
                     item.detail = `Add #include "${classMap[className]}"`;
-                    item.insertText = `#include "${classMap[className]}"`;
+
+                    // Change the insertion logic to add include at the beginning of the file
+                    item.command = {
+                        command: 'extension.insertIncludeAtTop',
+                        title: 'Insert Include at Top',
+                        arguments: [`#include "${classMap[className]}"\n`]
+                    };
                     completions.push(item);
                 }
             });
@@ -47,6 +53,20 @@ export function activate(context: vscode.ExtensionContext) {
             return completions;
         }
     });
+
+    // Command to insert include at the top of the file
+    let disposableInsertIncludeAtTop = vscode.commands.registerCommand('extension.insertIncludeAtTop', (includeLine: string) => {
+        const editor = vscode.window.activeTextEditor;
+        if (editor) {
+            const document = editor.document;
+            const firstLine = document.lineAt(0);
+            editor.edit(editBuilder => {
+                editBuilder.insert(firstLine.range.start, includeLine);
+            });
+        }
+    });
+
+    context.subscriptions.push(disposableInsertIncludeAtTop);
 }
 
 function analyzeWorkspace() {
