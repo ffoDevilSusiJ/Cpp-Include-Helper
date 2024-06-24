@@ -45,12 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ffoDevilSusiJ/auto-include"
+    "url": "https://github.com/ffoDevilSusiJ/Cpp-Include-Helper"
   },
   "bugs": {
-    "url": "https://github.com/ffoDevilSusiJ/auto-include/issues"
+    "url": "https://github.com/ffoDevilSusiJ/Cpp-Include-Helper/issues"
   },
-  "homepage": "https://github.com/ffoDevilSusiJ/auto-include",
+  "homepage": "https://github.com/ffoDevilSusiJ/Cpp-Include-Helper",
   "license": "MIT",
   "dependencies": {}
 }
